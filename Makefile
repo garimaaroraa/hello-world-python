@@ -16,6 +16,7 @@ upload: build
 release:
 	git tag v$(shell python3 setup.py --version)
 	git push origin v$(shell python3 setup.py --version)
+	curl --data '{"tag_name": "v$(shell python3 setup.py --version)"}' "https://api.github.com/repos/garimaarorashuttl/hello-world-python/releases?access_token=${GITHUB_TOKEN}"
 
 bump_version:
 	bumpversion --current-version $(shell python3 setup.py --version) patch setup.py
