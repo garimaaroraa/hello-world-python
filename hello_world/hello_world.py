@@ -11,13 +11,13 @@ class VehicleTripStats:
     start_count: int
     end_count: int
 
-    def __add__(self, other):
+    def __add__(self, other: "VehicleTripStats") -> "VehicleTripStats":
         return VehicleTripStats(
             start_count=self.start_count + other.start_count,
             end_count=self.end_count + other.end_count,
         )
 
-    def __eq__(self, other):
+    def __eq__(self, other: "VehicleTripStats") -> bool:
         return (
             self.start_count == other.start_count and self.end_count == other.end_count
         )
@@ -27,7 +27,7 @@ def hello_world(name: str) -> str:
     return f"Hello World {name}"
 
 
-def functools_reduce_test(vehicle_stats: List):
+def functools_reduce_test(vehicle_stats: List) -> VehicleTripStats:
     return reduce((lambda x, y: x + y), vehicle_stats)
 
 

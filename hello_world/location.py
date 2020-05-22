@@ -14,11 +14,11 @@ class Location:
         self.lat = lat
         self.lng = lng
 
-    def __eq__(self, o: object) -> bool:
+    def __eq__(self, o: "Location") -> bool:
         return (self.lat, self.lng) == (o.lat, o.lng)
 
     def __hash__(self) -> int:
         return hash((self.lat, self.lng))
 
-    def as_point(self):
+    def as_point(self) -> Point:
         return Point(self.lng, self.lat)
