@@ -37,4 +37,4 @@ jobs:
         pytest
     - name: Test coverage
       run: |
-        python3 -m pytest --cov=hello_world --cov-fail-under=100 -m 'not integration'
+        python3 -m pytest --cov=. --cov-fail-under=85 -m 'not integration'
