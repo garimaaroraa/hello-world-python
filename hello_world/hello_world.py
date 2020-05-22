@@ -23,7 +23,7 @@ class VehicleTripStats:
         )
 
 
-def hello_world(name: str):
+def hello_world(name: str) -> str:
     return f"Hello World {name}"
 
 
