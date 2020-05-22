@@ -10,9 +10,9 @@ setup(
     license="MIT",
     packages=find_packages(),
     classifiers=["Programming Language :: Python :: 3.7"],
-    install_requires=["requests"],
+    install_requires=["shapely"],
     extras_require={
-        "test": ["pytest", "pytest-runner", "pytest-cov", "pytest-pep8", "responses"],
+        "test": ["pytest", "pytest-runner", "pytest-cov", "pytest-pep8"],
         "dev": ["flake8"],
     },
 )
